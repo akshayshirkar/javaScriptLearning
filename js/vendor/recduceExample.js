@@ -35,12 +35,34 @@ const cars = [
 //
 // console.log(allCarweight);
 
-const evCarweight = cars.reduce((acc, cars) => {
-  if (cars.isElectric) {
-    return acc + cars.weight;
+// const evCarweight = cars.reduce((acc, cars) => {
+//   if (cars.isElectric) {
+//     return acc + cars.weight;
+//   }
+//   return acc;  // Add this line to return the accumulator when car is not electric
+// }, 0);
+//
+// console.log(evCarweight);
+
+const numbers = [1, 2, 3, 4, 5, 6];
+
+// Weite the reduce function to duble the number
+
+// const doublesNumers = numbers.reduce((acc,num) =>{
+//   acc.push(num*2);
+//   return acc;
+// },[]);
+//
+// console.log(doublesNumers);
+
+
+// Return the numbers which are grater than 2
+
+const numbersGraterThan2 = numbers.reduce((acc,num)=>{
+  if(num>2){
+   acc.push(num);
   }
-  return acc;  // Add this line to return the accumulator when car is not electric
-}, 0);
+  return acc;
+},[]);
 
-console.log(evCarweight);
-
+console.log(numbersGraterThan2)
